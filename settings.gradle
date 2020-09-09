@@ -1,0 +1,3 @@
+include ':yunSnack'
+include ':app'
+rootProject.name = "YunsSnack"
