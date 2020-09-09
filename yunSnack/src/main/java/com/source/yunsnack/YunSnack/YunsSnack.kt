@@ -5,12 +5,13 @@ import android.content.Context
 import android.graphics.PorterDuff
 import android.graphics.Typeface
 import android.os.Handler
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.widget.Button
-import android.widget.LinearLayout
+import android.widget.FrameLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.annotation.ColorRes
@@ -20,6 +21,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import com.source.yunsnack.Animation.Fade
 import com.source.yunsnack.R
+
 
 class YunsSnack(activity: Activity) {
     var snackView: View? = null
@@ -80,6 +82,17 @@ class YunsSnack(activity: Activity) {
         return this
     }
 
+    //position
+    fun setPosition() : YunsSnack{
+//        val view: View = rlvHost!!.rootView
+//        val params = view.layoutParams as RelativeLayout.LayoutParams
+//        params.
+//        params.gravity = Gravity.TOP
+//        view.layoutParams = params
+
+        return this
+    }
+
     // Duration
     fun setDuration(@NonNull millisecond: Int): YunsSnack {
         // Set duration.
@@ -116,7 +129,12 @@ class YunsSnack(activity: Activity) {
     // Background drawable (Drawable res).
     fun setBackgrounDrawable(@NonNull @DrawableRes drawableInt: Int): YunsSnack {
         // Set drawable to view.
-        ViewCompat.setBackground(rlvHost!!, ContextCompat.getDrawable(rlvHost!!.context, drawableInt))
+        ViewCompat.setBackground(
+            rlvHost!!, ContextCompat.getDrawable(
+                rlvHost!!.context,
+                drawableInt
+            )
+        )
         return this
     }
 

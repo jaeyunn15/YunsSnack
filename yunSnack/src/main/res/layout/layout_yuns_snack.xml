@@ -9,8 +9,8 @@
         android:id="@+id/normal_snack_bar_rlv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:elevation="8dp"
+        android:layout_alignParentTop="true"
         android:clipToPadding="false"
         android:background="@drawable/background_yunssnack">
 
